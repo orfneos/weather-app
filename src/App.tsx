@@ -26,7 +26,7 @@ function App() {
 }
 
   return (
-    <div>
+    <div className="min-h-screen bg-purple-950 text-sky-300 flex flex-col items-center p-8">
       <h1>Weather App</h1>
       <SearchBar onSearch={weatherApp}/>
       {dataWeather && <WeatherCard data={dataWeather}/>}

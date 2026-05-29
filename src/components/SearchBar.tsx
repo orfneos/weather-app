@@ -10,14 +10,16 @@ const SearchBar = ({ onSearch }: Props) => {
 
 
   return (
-    <div className="search-bar">
+    <div className="flex gap-2 mb-8 mt-8">
       <input 
+      className='bg-cyan-100 text-sky-300 placeholder-sky-600 px-4 py-2 rounded-lg'
       type="text" 
       value={city}
       onChange={(e) => setCity(e.target.value)}
       placeholder="Enter city name"
       />
-      <select 
+      <select
+      className='bg-cyan-100 px-2 py-2 rounded-lg'
       value={unit}
       onChange={(e) => setUnit(e.target.value)}
       >
@@ -25,6 +27,7 @@ const SearchBar = ({ onSearch }: Props) => {
         <option value="imperial">Fahrenheit</option>
       </select>
       <button 
+      className='bg-cyan-100 px-4 py-2 rounded-lg'
       type="submit"
       onClick={() => onSearch(city, unit)}
       >Search</button>
