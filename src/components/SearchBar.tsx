@@ -17,6 +17,7 @@ const SearchBar = ({ onSearch }: Props) => {
       value={city}
       onChange={(e) => setCity(e.target.value)}
       placeholder="Enter city name"
+      onKeyDown={(e) => e.key === "Enter" && onSearch(city, unit)}
       />
       <select
       className='bg-cyan-100 text-sky-600 px-2 py-2 rounded-lg'
